@@ -6,6 +6,13 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content wrapper to push footer down */
+.main-content {
+    flex: 1 0 auto;
 }
 
 /* Navigation Styles */
@@ -53,6 +60,7 @@ body {
     background-color: #3B2F2F;
     color: #FFEBD4;
     padding: 40px 0 20px 0;
+    flex-shrink: 0;
     margin-top: auto;
 }
 
@@ -474,4 +482,56 @@ body {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* Services Page Specific Styles */
+.service-details {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.service-details .d-flex {
+    margin-bottom: 10px;
+}
+
+.service-details .d-flex:last-child {
+    margin-bottom: 0;
+}
+
+/* Timetable Styles */
+.table-responsive table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th {
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.table td {
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 12px 8px;
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Service card hover effects for services page */
+.service-card .btn:hover {
+    background-color: #2a1f1f !important;
+    transform: translateY(-2px);
+}
+
+/* Booking cards */
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
 }
