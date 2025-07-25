@@ -59,13 +59,6 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <!-- Success Message (initially hidden) -->
-                    <div id="successMessage" class="alert alert-success alert-dismissible fade" role="alert" style="display: none;">
-                        <i class="fas fa-check-circle me-2"></i>
-                        <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you within 24 hours.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-
                     <!-- Contact Form -->
                     <div class="card border-0 shadow-lg">
                         <div class="card-body p-5">
@@ -229,12 +222,12 @@
             // Add Bootstrap validation classes
             this.classList.add('was-validated');
             
-            // If form is valid, show success message
+            // If form is valid, redirect to thank you page
             if (this.checkValidity()) {
-                document.getElementById('successMessage').style.display = 'block';
-                document.getElementById('successMessage').classList.add('show');
-                this.reset();
-                this.classList.remove('was-validated');
+                // Small delay to show validation feedback, then redirect
+                setTimeout(() => {
+                    window.location.href = 'thank-you.html';
+                }, 500);
             }
         });
     </script>
